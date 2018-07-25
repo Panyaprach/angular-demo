@@ -1,0 +1,35 @@
+.button {
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 15%;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+    cursor: pointer;
+    span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        &:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            // transition: 0.3s;
+        }
+    }
+    &:hover {
+        background: #fff;
+        color: #4267b2;
+        span {
+            padding-right: 20px;
+            &:after {
+                opacity: 1;
+                right: 0;
+            }
+        }
+    }
+}
