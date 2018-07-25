@@ -5,13 +5,13 @@
     padding: 10px 20px;
     color: #fff;
     text-decoration: none;
-    transition: 0.5s;
+    transition: 0.3s;
     cursor: pointer;
     span {
         cursor: pointer;
         display: inline-block;
         position: relative;
-        transition: 0.5s;
+        transition: 0.3s;
         &:after {
             content: '\00bb';
             position: absolute;
