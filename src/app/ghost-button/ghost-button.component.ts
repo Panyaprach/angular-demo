@@ -7,7 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class GhostButtonComponent implements OnInit {
 
-  private _name: string;
+  private _text: string;
+  private _link: string;
 
   constructor() { }
 
@@ -15,12 +16,21 @@ export class GhostButtonComponent implements OnInit {
   }
 
   @Input()
-  set name(name: string) {
-    this._name = (name && name.trim()) || '<no-name-set>';
+  set text(text: string) {
+    this._text = (text && text.trim()) || 'Hover me';
   }
 
-  get name(): string {
-    return this._name;
+  get text(): string {
+    return this._text;
+  }
+
+  get link():string{
+    return this._link;
+  }
+
+  @Input()
+  set link(link :string){
+    this._link = link;
   }
 
 }
